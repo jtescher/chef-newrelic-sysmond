@@ -30,7 +30,7 @@ unless node["new_relic"]["license_key"].empty?
   package "newrelic-sysmond"
 
   service "newrelic-sysmond" do
-    action [:enable, :start]
+    action :enable
   end
   
   template "/etc/newrelic/nrsysmond.cfg" do
