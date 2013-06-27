@@ -44,10 +44,10 @@ logfile=<%= node["new_relic"]["logfile"] %>
 # Option : proxy
 # Value  : The name and optional login credentials of the proxy server to use
 #          for all communication with the New Relic collector. In its simplest
-#          form this setting is just a hostname["port"] setting. The default
+#          form this setting is just a hostname[:port] setting. The default
 #          port if none is specified is 1080. If your proxy requires a user
-#          name, use the syntax user@host["port"]. If it also requires a
-#          password use the format user:password@host["port"]. For example:
+#          name, use the syntax user@host[:port]. If it also requires a
+#          password use the format user:password@host[:port]. For example:
 #            fred:secret@proxy.mydomain.com:8181
 # Default: none (use a direct connection)
 #
@@ -109,7 +109,7 @@ pidfile=<%= node["new_relic"]["pidfile"] %>
 # Option : collector_host
 # Value  : The name of the New Relic collector to connect to. This should only
 #          ever be changed on advise from a New Relic support staff member.
-#          The format is host["port"]. Using a port number of 0 means the default
+#          The format is host[:port]. Using a port number of 0 means the default
 #          port, which is 80 (if not using the ssl option - see below) or 443
 #          if SSL is enabled. If the port is omitted the default value is used.
 # Default: collector.newrelic.com
